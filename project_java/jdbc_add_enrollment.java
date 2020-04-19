@@ -1,7 +1,7 @@
 import java.sql.*;
 
 //Course: DeptCode, CourseNum, Title, CreditHours
-public class jdbc_add_course {
+public class jdbc_add_enrollment {
    // The main program that inserts a restaurant
    public static void main(String[] args) throws SQLException {
       String Username = "gbglenn"; // Change to your own username
@@ -14,28 +14,26 @@ public class jdbc_add_course {
 
       // For debugging purposes: Show the database before the insert
       StringBuilder builder = new StringBuilder();
-      String query1 = "SELECT * from Course";
-      builder.append("<br> Table Course before:" + myDB.query(query1) + "<br>");
+      String query1 = "SELECT * from Enrollment";
+      builder.append("<br> Table Enrollment before:" + myDB.query(query1) + "<br>");
 
-      // Parse input string to get restauranrestaurant Name and Address
-      String code = "STUDENT ID";
-      String num = "STUDENT NAME";
-      String title = "COURSE TITLE";
-      String credit = "CREDIT HOURS";
+      // Parse input string to get Enrollment id, name, and num
+      String id = "ENROLLMENT STUD ID";
+      String code = "ENROLLMENT DEPTCODE";
+      String num = "ENROLLMENT COURSE NUMBER";
 
       // Read command line arguments
-      code = args[0];
-      num = args[1];
-      title = args[2];
-      credit = args[3];
+      id = args[0];
+      code = args[1];
+      num = args[2];
 
       // Insert the new Student
-      String input = "'" + code + "','" + num + "','" + title + "','" + credit + "'";
+      String input = "'" + id + "','" + code + "','" + num + "'";
       builder.append("Command Executed: " + input);
-      myDB.insert("Course", input);
+      myDB.insert("Enrollment", input);
 
       // For debugging purposes: Show the database after the insert
-      builder.append("<br><br><br> Table Course after:" + myDB.query(query1));
+      builder.append("<br><br><br> Table Enrollment after:" + myDB.query(query1));
       System.out.println(builder.toString());
 
       myDB.disConnect();
