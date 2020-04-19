@@ -6,7 +6,7 @@
 </head>
 
 <body>
-    <h3>Enter information about a Course to add to the database:</h3>
+    <h3>Enter information about an Enrollment to add to the database:</h3>
 
     <form action="jdbc_add_enrollment.php" method="post">
         Student ID: <input type="text" name="id"><br>

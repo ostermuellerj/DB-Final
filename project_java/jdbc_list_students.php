@@ -6,7 +6,7 @@
 </head>
 
 <body>
-    <h3>Enter information about a Student to add to the database:</h3>
+    <h3>This shows all of the students:</h3>
 
     <form action="jdbc_list_students.php" method="post">
         Click to show all students <input name="submit" type="submit">
