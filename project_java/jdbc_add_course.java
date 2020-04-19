@@ -1,12 +1,7 @@
 import java.sql.*;
 
-/*
-jdbc_insert_restaurant.java    // java program that is called by php that just does the insert; calls jdbc_db.java to connect and do the actual insert
-jdbc_db.java // class (no main program) that has useful methods
-*/
-
 //Course: DeptCode, CourseNum, Title, CreditHours
-public class jdbc_add_student{
+public class jdbc_add_course{
    // The main program that inserts a restaurant
    public static void main(String[] args) throws SQLException 
    {
@@ -36,12 +31,12 @@ public class jdbc_add_student{
       credit = args[3];
 
       // Insert the new Student
-      String input = "'" + id + "','" + name + "','" + major + "'";
+      String input = "'" + code + "','" + num + "','" + title + "','" + credit + "'";
       builder.append("Command Executed: " + input);               
-      myDB.insert("Student", input);
+      myDB.insert("Course", input);
 
       // For debugging purposes:  Show the database after the insert
-      builder.append("<br><br><br> Table Student after:" + myDB.query(query1));
+      builder.append("<br><br><br> Table Course after:" + myDB.query(query1));
       System.out.println(builder.toString());     
 
       myDB.disConnect();
