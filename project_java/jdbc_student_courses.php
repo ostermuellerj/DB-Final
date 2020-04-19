@@ -4,15 +4,13 @@
         <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
 <body>
-    <h3>Enter information about a Student to add to the database:</h3>
+    <h3>Enter information about a student to display courses:</h3>
 
-    <form action="jdbc_list_students.php" method="post">
-        Click to show all students <input name="submit" type="submit">
+    <form action="jdbc_display_course.php" method="post">
+        Student ID: <input type="text" name="id"><br>
+        <input name="submit" type="submit">
     </form>
-    <br>
-    <h3>
-        <a href="index.html">Return to homepage.</a>
-    </h3>
+    <br><br>
 
 </body>
 
@@ -21,8 +19,9 @@
 <?php
 if (isset($_POST['submit'])) {
     // replace ' ' with '\ ' in the strings so they are treated as single command line args
+    $id = escapeshellarg($_POST[id]);
 
-    $command = 'java -cp .:mysql-connector-java-5.1.40-bin.jar jdbc_list_students ' . $id . ' ' . $name . ' ' . $major;
+    $command = 'java -cp .:mysql-connector-java-5.1.40-bin.jar jdbc_student_courses ' . $id;
 
     // remove dangerous characters from command to protect web server
     $command = escapeshellcmd($command);
