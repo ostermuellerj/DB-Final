@@ -1,5 +1,8 @@
+<!DOCTYPE html>
 <html>
-
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
 <body>
     <h3>Enter information about a department to display courses:</h3>
 
@@ -7,8 +10,10 @@
         Department: <input type="text" name="dep"><br>
         <input name="submit" type="submit">
     </form>
-    <br><br>
-
+    <br>
+    <h3>
+        <a href="index.html">Return to homepage.</a>
+    </h3>
 </body>
 
 </html>
