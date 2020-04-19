@@ -26,8 +26,8 @@ public class jdbc_student_courses {
         //SELECT * FROM Enrollment INNER JOIN Course ON Enrollment.CourseNum = Course.CourseNum WHERE StudentId=1;
         String query1 = "SELECT Course.CourseId, Course.CourseNum, Course.DeptCode, Course.Title, Course.CreditHours FROM Enrollment INNER JOIN Course ON Enrollment.CourseNum = Course.CourseNum WHERE StudentId=" + id;
 
-        System.out.println(query1);
-        builder.append("<br><br> Courses for student " + id + ":" + myDB.query(query1));
+        // System.out.println(query1);
+        builder.append("<br> Courses for student " + id + ":" + myDB.query(query1));
         System.out.println(builder.toString());
 
         myDB.disConnect();

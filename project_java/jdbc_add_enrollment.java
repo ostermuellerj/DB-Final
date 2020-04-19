@@ -34,7 +34,7 @@ public class jdbc_add_enrollment {
       myDB.insert("Enrollment (StudentId, DeptCode, CourseNum)", input);
 
       // For debugging purposes: Show the database after the insert
-      builder.append("<br><br> Enrollment table:" + myDB.query(query1));
+      builder.append("<br> Enrollment table:" + myDB.query(query1));
       System.out.println(builder.toString());
 
       myDB.disConnect();
