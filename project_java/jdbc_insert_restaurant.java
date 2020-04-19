@@ -10,8 +10,8 @@ public class jdbc_insert_restaurant
    // The main program that inserts a restaurant
    public static void main(String[] args) throws SQLException 
    {
-   String Username = "MYUSERNAME";              // Change to your own username
-   String mysqlPassword = "MYMYSQLPASSWORD";    // Change to your own mysql Password
+   String Username = "jostermu";              // Change to your own username
+   String mysqlPassword = "paimohG8";    // Change to your own mysql Password
 
       // Connect to the database
       jdbc_db myDB = new jdbc_db();
