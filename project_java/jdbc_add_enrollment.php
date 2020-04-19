@@ -3,7 +3,7 @@
 <body>
     <h3>Enter information about a Course to add to the database:</h3>
 
-    <form action="jdbc_add_student.php" method="post">
+    <form action="jdbc_add_enrollment.php" method="post">
         DeptCode: <input type="text" name="id"><br>
         CourseNum: <input type="text" name="code"><br>
         Type: <input type="text" name="num"><br>
@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
     $code = escapeshellarg($_POST[code]);
     $num = escapeshellarg($_POST[num]);
 
-    $command = 'java -cp .:mysql-connector-java-5.1.40-bin.jar jdbc_add_course ' . $id . ' ' . $code . ' ' . $num;
+    $command = 'java -cp .:mysql-connector-java-5.1.40-bin.jar jdbc_add_enrollment ' . $id . ' ' . $code . ' ' . $num;
 
     // remove dangerous characters from command to protect web server
     $command = escapeshellcmd($command);

@@ -3,7 +3,7 @@
 <body>
     <h3>Enter information about a Course to add to the database:</h3>
 
-    <form action="jdbc_add_student.php" method="post">
+    <form action="jdbc_add_course.php" method="post">
         DeptCode: <input type="text" name="code"><br>
         CourseNum: <input type="text" name="num"><br>
         Type: <input type="text" name="title"><br>
