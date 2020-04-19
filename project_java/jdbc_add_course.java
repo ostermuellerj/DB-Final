@@ -33,11 +33,11 @@ public class jdbc_add_course {
       // String input = "'" + code + "','" + num + "','" + title + "','" + credit +
       // "'";
       String input = code + "," + num + ",'" + title + "'," + credit;
-      builder.append("Command Executed: " + input);
+      // builder.append("Command Executed: " + input);
       myDB.insert("Course (CourseNum, DeptCode, Title, CreditHours)", input);
 
       // For debugging purposes: Show the database after the insert
-      builder.append("<br><br> Course table:" + myDB.query(query1));
+      builder.append("<br> Course table:" + myDB.query(query1));
       System.out.println(builder.toString());
 
       myDB.disConnect();
