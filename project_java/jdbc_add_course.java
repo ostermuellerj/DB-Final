@@ -5,8 +5,8 @@ jdbc_insert_restaurant.java    // java program that is called by php that just d
 jdbc_db.java // class (no main program) that has useful methods
 */
 
-public class jdbc_insert_restaurant 
-{
+//Course: DeptCode, CourseNum, Title, CreditHours
+public class jdbc_add_student{
    // The main program that inserts a restaurant
    public static void main(String[] args) throws SQLException 
    {
@@ -16,31 +16,32 @@ public class jdbc_insert_restaurant
       // Connect to the database
       jdbc_db myDB = new jdbc_db();
       myDB.connect(Username, mysqlPassword);
-      myDB.initDatabase();
+      myDB.initDatabase();				    
 
       // For debugging purposes:  Show the database before the insert
       StringBuilder builder = new StringBuilder();
-      String query1 = "SELECT * from Restaurant";
-      builder.append("<br> Table Restaurant before:" + myDB.query(query1) + "<br>");       
+      String query1 = "SELECT * from Course";
+      builder.append("<br> Table Course before:" + myDB.query(query1) + "<br>");       
 
       // Parse input string to get restauranrestaurant Name and Address
-      String restaurant = "4";
-      String name = "NAME";
-      String type = "TYPE";
-      String city = "CITY";
+      String code = "STUDENT ID";
+      String num = "STUDENT NAME";
+      String title = "COURSE TITLE";
+      String credit = "CREDIT HOURS";
 
       // Read command line arguments
-      // args[0] is the first parameter
-      name = args[0];
-      type = args[1];
-      city = args[2];
+      code = args[0];
+      num = args[1];
+      title = args[2];
+      credit = args[3];
 
-      // Insert the new restaurant
-      String input = restaurant + ",'" + name + "','" + type + "','" + city + "'";               
-      myDB.insert("Restaurant", input);    // insert new restaurant
+      // Insert the new Student
+      String input = "'" + id + "','" + name + "','" + major + "'";
+      builder.append("Command Executed: " + input);               
+      myDB.insert("Student", input);
 
       // For debugging purposes:  Show the database after the insert
-      builder.append("<br><br><br> Table Restaurant after:" + myDB.query(query1));
+      builder.append("<br><br><br> Table Student after:" + myDB.query(query1));
       System.out.println(builder.toString());     
 
       myDB.disConnect();
