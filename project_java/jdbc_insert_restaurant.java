@@ -16,7 +16,7 @@ public class jdbc_insert_restaurant
       // Connect to the database
       jdbc_db myDB = new jdbc_db();
       myDB.connect(Username, mysqlPassword);
-      myDB.initDatabase();				    
+      myDB.initDatabase();
 
       // For debugging purposes:  Show the database before the insert
       StringBuilder builder = new StringBuilder();
