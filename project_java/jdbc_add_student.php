@@ -7,9 +7,9 @@
     <h3>Enter information about a Student to add to the database:</h3>
 
     <form action="jdbc_add_student.php" method="post">
-        Name: <input type="text" name="id"><br>
-        Type: <input type="text" name="name"><br>
-        City: <input type="text" name="major"><br>
+        ID: <input type="text" name="id"><br>
+        Name: <input type="text" name="name"><br>
+        Major: <input type="text" name="major"><br>
         <input name="submit" type="submit">
     </form>
     <br>
