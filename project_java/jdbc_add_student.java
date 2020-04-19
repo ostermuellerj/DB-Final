@@ -4,9 +4,8 @@ import java.sql.*;
 jdbc_insert_restaurant.java    // java program that is called by php that just does the insert; calls jdbc_db.java to connect and do the actual insert
 jdbc_db.java // class (no main program) that has useful methods
 */
-
-public class jdbc_insert_restaurant 
-{
+//Student: StudentId, StudentName, Major
+public class jdbc_add_student{
    // The main program that inserts a restaurant
    public static void main(String[] args) throws SQLException 
    {
