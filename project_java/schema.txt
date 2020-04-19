@@ -1,0 +1,36 @@
+drop table POLICIES_SOLD;
+drop table POLICY;
+drop table CLIENTS;
+drop table AGENTS;
+
+CREATE TABLE Student (
+    StudentId INT,
+    StudentName CHAR(50) NOT NULL,
+    Major CHAR(50) NOT NULL,
+    PRIMARY KEY (StudentId)
+);
+
+CREATE TABLE Course (
+    CourseId INT NOT NULL AUTO_INCREMENT,
+    CourseNum INT NOT NULL,
+    DeptCode INT NOT NULL,
+    Title CHAR(50) NOT NULL,
+    CreditHours INT NOT NULL,
+    PRIMARY KEY (CourseId)
+);
+
+CREATE TABLE Enrollment (
+    EnrollmentId INT NOT NULL AUTO_INCREMENT,
+    StudentId INT NOT NULL,
+    DeptCode INT NOT NULL,
+    CourseNum INT NOT NULL,
+    PRIMARY KEY (EnrollmentId)
+);
+
+INSERT INTO Student VALUES (0, 'Jane', 'Anthropology'), (1, 'Aiden', 'Animal Science');
+
+INSERT INTO Course (CourseNum, DeptCode, Title, CreditHours)
+VALUES (1001, 3, 'Sociology', 3), (2001, 7, 'Biology', 3);
+
+INSERT INTO Enrollment (StudentId, DeptCode, CourseNum)
+VALUES (0, 3, 1001), (1, 7, 2001);

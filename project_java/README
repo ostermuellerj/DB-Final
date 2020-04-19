@@ -10,10 +10,12 @@ better summary:
 3. open php files (located in ur turing) with chrome, my file path looks like the following, yours could be different:
    http://turing.csce.uark.edu/~jostermu/d-b-final/project_java/jdbc_insert_restaurant.php
 
-4. insert into table (table does not yet exist, so this will produce an error), cmd line args[] are NAME[0], TYPE[1], CITY[2]:
+4. update ur credentials in jdbc_insert_restaurant.java
+
+5. insert into table (table does not yet exist, so this will produce an error), cmd line args[] are NAME[0], TYPE[1], CITY[2]:
    java -cp .:mysql-connector-java-5.1.40-bin.jar jdbc_insert_restaurant Flying\ Burrito Mexican Springdale
 
-(5. once we add this table in mysql, it will show up with select statements, etc.)
+(6. once we add this table in mysql, it will show up with select statements, etc.)
 **************************************************************************************************************************
 
 http://pausch.ddns.uark.edu/?page_id=316 has details on how to set up your permissions.  
