@@ -1,6 +1,6 @@
 <html>
 <body>
-<h3>Enter information about a restaurant to add to the database:</h3>
+<h3>Enter information about a Student to add to the database:</h3>
 
 <form action="jdbc_add_student.php" method="post">
     Name: <input type="text" name="id"><br>
@@ -21,7 +21,7 @@ if (isset($_POST['submit']))
     $name = escapeshellarg($_POST[name]);
     $major = escapeshellarg($_POST[major]);
 
-    $command = 'java -cp .:mysql-connector-java-5.1.40-bin.jar jdbc_insert_restaurant ' . $id . ' ' . $name . ' ' . $major;
+    $command = 'java -cp .:mysql-connector-java-5.1.40-bin.jar jdbc_add_student ' . $id . ' ' . $name . ' ' . $major;
 
     // remove dangerous characters from command to protect web server
     $command = escapeshellcmd($command);

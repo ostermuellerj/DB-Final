@@ -30,7 +30,6 @@ public class jdbc_add_student{
       String major = "STUDENT MAJOR";
 
       // Read command line arguments
-      // args[0] is the first parameter
       id = args[0];
       name = args[1];
       major = args[2];
@@ -38,7 +37,7 @@ public class jdbc_add_student{
       // Insert the new Student
       String input = "'" + id + "','" + name + "','" + major + "'";
       builder.append("Command Executed: " + input);               
-      myDB.insert("Student", input);    // insert new restaurant
+      myDB.insert("Student", input);
 
       // For debugging purposes:  Show the database after the insert
       builder.append("<br><br><br> Table Student after:" + myDB.query(query1));
