@@ -4,9 +4,9 @@
     <h3>Enter information about a Course to add to the database:</h3>
 
     <form action="jdbc_add_enrollment.php" method="post">
-        DeptCode: <input type="text" name="id"><br>
-        CourseNum: <input type="text" name="code"><br>
-        Type: <input type="text" name="num"><br>
+        Student ID: <input type="text" name="id"><br>
+        Department Code: <input type="text" name="code"><br>
+        Course Number: <input type="text" name="num"><br>
         <input name="submit" type="submit">
     </form>
     <br><br>
