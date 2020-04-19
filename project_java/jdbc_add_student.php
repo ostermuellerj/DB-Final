@@ -3,9 +3,9 @@
 <h3>Enter information about a restaurant to add to the database:</h3>
 
 <form action="jdbc_add_student.php" method="post">
-    Name: <input type="text" name="name"><br>
-    Type: <input type="text" name="type"><br>
-    City: <input type="text" name="city"><br>
+    Name: <input type="text" name="id"><br>
+    Type: <input type="text" name="name"><br>
+    City: <input type="text" name="major"><br>
     <input name="submit" type="submit" >
 </form>
 <br><br>
@@ -17,11 +17,11 @@
 if (isset($_POST['submit'])) 
 {
     // replace ' ' with '\ ' in the strings so they are treated as single command line args
+    $id = escapeshellarg($_POST[id]);
     $name = escapeshellarg($_POST[name]);
-    $type = escapeshellarg($_POST[type]);
-    $city = escapeshellarg($_POST[city]);
+    $major = escapeshellarg($_POST[major]);
 
-    $command = 'java -cp .:mysql-connector-java-5.1.40-bin.jar jdbc_insert_restaurant ' . $name . ' ' . $type . ' ' . $city;
+    $command = 'java -cp .:mysql-connector-java-5.1.40-bin.jar jdbc_insert_restaurant ' . $id . ' ' . $name . ' ' . $major;
 
     // remove dangerous characters from command to protect web server
     $command = escapeshellcmd($command);
