@@ -7,7 +7,7 @@
     <h3>Enter information about a department to display courses:</h3>
 
     <form action="jdbc_display_course.php" method="post">
-        Department: <input type="text" name="dep"><br>
+        Department Code: <input type="text" name="dep"><br>
         <input name="submit" type="submit">
     </form>
     <br>
