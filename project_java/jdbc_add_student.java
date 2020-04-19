@@ -15,7 +15,7 @@ public class jdbc_add_student {
       // For debugging purposes: Show the database before the insert
       StringBuilder builder = new StringBuilder();
       String query1 = "SELECT * from Student";
-      builder.append("<br> Table Student before:" + myDB.query(query1) + "<br>");
+      // builder.append("<br> Table Student before:" + myDB.query(query1) + "<br>");
 
       // Parse input string to get restauranrestaurant Name and Address
       String id = "STUDENT ID";
@@ -29,11 +29,11 @@ public class jdbc_add_student {
 
       // Insert the new Student
       String input = "'" + id + "','" + name + "','" + major + "'";
-      builder.append("Command Executed: " + input);
+      // builder.append("Command Executed: " + input);
       myDB.insert("Student", input);
 
       // For debugging purposes: Show the database after the insert
-      builder.append("<br><br><br> Table Student after:" + myDB.query(query1));
+      builder.append("<br><br> Student table:" + myDB.query(query1));
       System.out.println(builder.toString());
 
       myDB.disConnect();
