@@ -37,7 +37,7 @@ if (isset($_POST['submit'])) {
 
     // remove dangerous characters from command to protect web server
     $command = escapeshellcmd($command);
-    echo "<p>command: $command <p>";
+    // echo "<p>command: $command <p>";
 
     // run
     system($command);

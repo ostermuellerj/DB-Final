@@ -33,7 +33,7 @@ public class jdbc_add_student {
       myDB.insert("Student", input);
 
       // For debugging purposes: Show the database after the insert
-      builder.append("<br><br> Student table:" + myDB.query(query1));
+      builder.append("<br> Student table:" + myDB.query(query1));
       System.out.println(builder.toString());
 
       myDB.disConnect();

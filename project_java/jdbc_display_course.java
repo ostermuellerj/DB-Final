@@ -23,8 +23,8 @@ public class jdbc_display_course {
 
         // For debugging purposes: Show the database after the insert
         String query1 = "SELECT * FROM Course WHERE DeptCode=" + dep;
-        System.out.println(query1);
-        builder.append("<br><br><br> Courses from Department " + dep + ":" + myDB.query(query1));
+        // System.out.println(query1);
+        builder.append("<br> Courses from Department " + dep + ":" + myDB.query(query1));
         System.out.println(builder.toString());
 
         myDB.disConnect();
