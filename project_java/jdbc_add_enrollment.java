@@ -30,7 +30,7 @@ public class jdbc_add_enrollment {
       // Insert the new Student
       String input = "'" + id + "','" + code + "','" + num + "'";
       builder.append("Command Executed: " + input);
-      myDB.insert("Enrollment", input);
+      myDB.insert("Enrollment (StudentId, DeptCode, CourseNum)", input);
 
       // For debugging purposes: Show the database after the insert
       builder.append("<br><br><br> Table Enrollment after:" + myDB.query(query1));

@@ -30,9 +30,10 @@ public class jdbc_add_course {
       credit = args[3];
 
       // Insert the new Student
-      String input = "'" + code + "','" + num + "','" + title + "','" + credit + "'";
+      //String input = "'" + code + "','" + num + "','" + title + "','" + credit + "'";
+      String input = code + "," + num + ",'" + title + "'," + credit;
       builder.append("Command Executed: " + input);
-      myDB.insert("Course", input);
+      myDB.insert("Course (CourseNum, DeptCode, Title, CreditHours)", input);
 
       // For debugging purposes: Show the database after the insert
       builder.append("<br><br><br> Table Course after:" + myDB.query(query1));
