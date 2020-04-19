@@ -2,7 +2,7 @@ public class hello
 {
    public static void main(String[] args) 
    {
-   String name = "";
+	  String name = "";
 
       // get the parameter; args[0] is the first parameter
       name = name + args[0];   
