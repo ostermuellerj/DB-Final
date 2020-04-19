@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="styles.css">
-    </head>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
 <body>
     <h3>Enter information about a student to display courses:</h3>
 
