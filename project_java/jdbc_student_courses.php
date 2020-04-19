@@ -6,11 +6,14 @@
 <body>
     <h3>Enter information about a student to display courses:</h3>
 
-    <form action="jdbc_display_course.php" method="post">
+    <form action="jdbc_student_courses.php" method="post">
         Student ID: <input type="text" name="id"><br>
         <input name="submit" type="submit">
     </form>
-    <br><br>
+    <br>
+    <h3>
+        <a href="index.html">Return to homepage.</a>
+    </h3>
 
 </body>
 

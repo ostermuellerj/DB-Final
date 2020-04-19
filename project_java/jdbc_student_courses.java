@@ -16,14 +16,15 @@ public class jdbc_student_courses {
         StringBuilder builder = new StringBuilder();
 
         // Parse input string to get restauranrestaurant Name and Address
-        String dep = "STUDENT ID";
+        String id = "STUDENT ID";
 
         // Read command line arguments
-        dep = args[0];
+        id = args[0];
 
         // For debugging purposes: Show the database after the insert
-        String query1 = "";
-        builder.append("<br><br><br> Courses from Department" + dep + "after:" + myDB.query(query1));
+        String query1 = "SELECT * FROM Enrollment WHERE StudentId=" + id;
+        System.out.println(query1);
+        builder.append("<br><br><br> Courses for student" + id + "after:" + myDB.query(query1));
         System.out.println(builder.toString());
 
         myDB.disConnect();
