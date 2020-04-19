@@ -16,10 +16,10 @@ public class jdbc_student_courses {
         StringBuilder builder = new StringBuilder();
 
         // Parse input string to get restauranrestaurant Name and Address
-        String id = "STUDENT ID";
+        String dep = "STUDENT ID";
 
         // Read command line arguments
-        id = args[0];
+        dep = args[0];
 
         // For debugging purposes: Show the database after the insert
         String query1 = "";

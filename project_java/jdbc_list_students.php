@@ -16,7 +16,7 @@
 if (isset($_POST['submit'])) {
     // replace ' ' with '\ ' in the strings so they are treated as single command line args
 
-    $command = 'java -cp .:mysql-connector-java-5.1.40-bin.jar jdbc_list_students ' . $id . ' ' . $name . ' ' . $major;
+    $command = 'java -cp .:mysql-connector-java-5.1.40-bin.jar jdbc_list_students ';
 
     // remove dangerous characters from command to protect web server
     $command = escapeshellcmd($command);
