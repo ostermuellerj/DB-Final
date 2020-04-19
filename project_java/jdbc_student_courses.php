@@ -12,7 +12,10 @@
         Student ID: <input type="text" name="id"><br>
         <input name="submit" type="submit">
     </form>
-    <br><br>
+    <br>
+    <h3>
+        <a href="index.html">Return to homepage.</a>
+    </h3>
 
 </body>
 
