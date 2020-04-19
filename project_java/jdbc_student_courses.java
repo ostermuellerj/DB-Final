@@ -24,7 +24,7 @@ public class jdbc_student_courses {
         // For debugging purposes: Show the database after the insert
         // String query1 = "SELECT * FROM Enrollment WHERE StudentId=" + id;
         //SELECT * FROM Enrollment INNER JOIN Course ON Enrollment.CourseNum = Course.CourseNum WHERE StudentId=1;
-        String query1 = "SELECT * FROM Enrollment INNER JOIN Course ON Enrollment.CourseNum = Course.CourseNum WHERE StudentId=" + id;
+        String query1 = "SELECT Course.CourseId, Course.CourseNum, Course.DeptCode, Course.Title, Course.CreditHours FROM Enrollment INNER JOIN Course ON Enrollment.CourseNum = Course.CourseNum WHERE StudentId=" + id;
 
         System.out.println(query1);
         builder.append("<br><br><br> Courses for student" + id + "after:" + myDB.query(query1));
