@@ -27,7 +27,7 @@ public class jdbc_student_courses {
         String query1 = "SELECT Course.CourseId, Course.CourseNum, Course.DeptCode, Course.Title, Course.CreditHours FROM Enrollment INNER JOIN Course ON Enrollment.CourseNum = Course.CourseNum WHERE StudentId=" + id;
 
         System.out.println(query1);
-        builder.append("<br><br><br> Courses for student" + id + "after:" + myDB.query(query1));
+        builder.append("<br><br> Courses for student " + id + ":" + myDB.query(query1));
         System.out.println(builder.toString());
 
         myDB.disConnect();

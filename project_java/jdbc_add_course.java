@@ -15,7 +15,7 @@ public class jdbc_add_course {
       // For debugging purposes: Show the database before the insert
       StringBuilder builder = new StringBuilder();
       String query1 = "SELECT * from Course";
-      builder.append("<br> Table Course before:" + myDB.query(query1) + "<br>");
+      // builder.append("<br> Table Course before:" + myDB.query(query1) + "<br>");
 
       // Parse input string to get restauranrestaurant Name and Address
       String code = "STUDENT ID";
@@ -37,7 +37,7 @@ public class jdbc_add_course {
       myDB.insert("Course (CourseNum, DeptCode, Title, CreditHours)", input);
 
       // For debugging purposes: Show the database after the insert
-      builder.append("<br><br><br> Table Course after:" + myDB.query(query1));
+      builder.append("<br><br> Course table:" + myDB.query(query1));
       System.out.println(builder.toString());
 
       myDB.disConnect();

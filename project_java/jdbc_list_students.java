@@ -15,7 +15,7 @@ public class jdbc_list_students {
         // For debugging purposes: Show the database before the insert
         StringBuilder builder = new StringBuilder();
         String query1 = "SELECT * from Student";
-        builder.append("<br> Table Student:" + myDB.query(query1) + "<br>");
+        builder.append("<br><br> Student table:" + myDB.query(query1) + "<br>");
         System.out.println(builder.toString());
 
         myDB.disConnect();
